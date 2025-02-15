@@ -1,0 +1,74 @@
+# .gitignore for MERN Stack App
+
+### General ###
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.swp
+*.pid
+*.pid.lock
+
+### Environment Files ###
+# Backend environment files
+backend/.env
+backend/.env.*
+!backend/.env.example  # Keep example files
+
+# Frontend environment files (if using Create-React-App)
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+### Dependencies ###
+# Node modules - root, backend, and frontend
+**/node_modules/
+node_modules/
+
+# Build files
+**/build/
+build/
+
+# Dependency directories
+jspm_packages/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+### Backend Specific ###
+# Database files
+*.db
+*.sqlite
+
+# Production files
+backend/dist/
+backend/public/uploads/
+
+### Frontend Specific ###
+# React
+frontend/.next/
+frontend/.cache/
+frontend/out/
+frontend/.sass-cache/
+
+# Testing
+/coverage
+**/.nyc_output
+
+### IDE ###
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### OS Generated ###
+ehthumbs.db
+Icon?
+Network Trash Folder
+Temporary Items
+.apdisk
