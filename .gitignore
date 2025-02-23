@@ -11,16 +11,16 @@ Thumbs.db
 
 ### Environment Files ###
 # Backend environment files
-backend/.env
-backend/.env.*
+Back-end/.env
+Back-end/.env.*
 !backend/.env.example  # Keep example files
 
 # Frontend environment files (if using Create-React-App)
-frontend/.env
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
+Front-end/.env
+Front-end/.env.local
+Front-end/.env.development.local
+Front-end/.env.test.local
+Front-end/.env.production.local
 
 ### Dependencies ###
 # Node modules - root, backend, and frontend
