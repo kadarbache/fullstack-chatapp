@@ -7,13 +7,14 @@ import ProfilePage from "./pages/profilePage";
 import SettingPage from "./pages/settingPage";
 import userAuthStore from "./store/userAuthStore";
 import Navbar from "./components/navbar";
+import { useThemeStore } from "./store/useThemeStore";
 
 function App() {
   const { authUser } = userAuthStore();
-  console.log(authUser);
-  console.log("App");
+  const { theme } = useThemeStore();
+  console.log(authUser, "why is this null");
   return (
-    <div className="text-white">
+    <div data-theme={theme}>
       <Navbar />
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <LoginPage />} />

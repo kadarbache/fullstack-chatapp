@@ -5,10 +5,10 @@ import userAuthStore from '../store/userAuthStore'
 export default function HomePage() {
   const { checkAuth, authUser } = userAuthStore();
 
-  console.log(authUser);
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
+  console.log(authUser, checkAuth);
 
   return <div>HomePage</div>;
 }

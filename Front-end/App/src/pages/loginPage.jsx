@@ -1,14 +1,14 @@
 import { useState } from "react";
 import userAuthStore from "../store/userAuthStore";
-import AuthImagePattern from "../components/AuthImagePattern";
+import AuthImagePattern from "../components/authImagePattern";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "ibado@gmail.com",
+    password: "ibado123",
   });
   const { login, isLogingIn } = userAuthStore();
 
