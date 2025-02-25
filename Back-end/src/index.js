@@ -9,12 +9,6 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
 
 app.use(
   express.json({
@@ -23,6 +17,14 @@ app.use(
 );
 
 app.use(cookieparser());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+
 app.use("/api/auth", authRoute);
 app.use("/api/messages", messagesRoute);
 
