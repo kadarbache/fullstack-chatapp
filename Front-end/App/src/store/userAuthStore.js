@@ -8,10 +8,11 @@ const userAuthStore = create((set) => ({
   isLogingIn: false,
   isUpdatingProfile: false,
   isChekingAuth: false,
+
   checkAuth: async () => {
     try {
       const res = await axiosInstance.get("/auth/check");
-      set({isChekingAuth: true });
+      set({ isChekingAuth: true });
       set({ authUser: res.data });
     } catch (error) {
       console.log(error);
