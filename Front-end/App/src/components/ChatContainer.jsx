@@ -32,6 +32,8 @@ function ChatContainer() {
     );
   }
 
+  console.log(messages[0]);
+
   return (
     <div className="flex flex-col overflow-auto flex-1">
       <ChatHeader />
@@ -39,7 +41,7 @@ function ChatContainer() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
           <div
-            key={message._id}
+            key={message.Id}
             className={`chat ${
               message.senderId === authUser.user._id ? "chat-end" : "chat-start"
             }`}
